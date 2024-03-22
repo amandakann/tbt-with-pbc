@@ -1,11 +1,9 @@
 import json, csv, os, statistics, glob, argparse
-from tabulate import tabulate
 import pandas as pd
-from langinfo.glottolog import Glottolog
 import lang2vec.lang2vec as l2v
 from collections import defaultdict
 from iso639 import Lang
-from iso639.exceptions import InvalidLanguageValue, DeprecatedLanguageValue
+from iso639.exceptions import InvalidLanguageValue
 
 fmap = {
     "adj":"S_ADJECTIVE_AFTER_NOUN",

@@ -54,5 +54,5 @@ plots <- ggarrange(plotlist = figures, ncol=4, nrow=2, labels = labels, vjust = 
   theme(plot.margin = margin(0.5,0.5,0.5,0.5, "cm"))
 plots2 <- annotate_figure(plots, left = textGrob("Ratio of head-dependent order in UD data", rot = 90, vjust = 1, gp = gpar(cex = 1.3)),
                 bottom = textGrob("Ratio of head-dependent order in Bible data", gp = gpar(cex = 1.3)))
-print(plots2)
+ggsave(file.path(dirname(rstudioapi::getSourceEditorContext()$path), "output", "figures", "figure2.pdf"), plot = plots2, width = 12, height = 6)
 
