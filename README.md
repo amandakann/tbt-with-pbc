@@ -4,6 +4,8 @@ Code for comparing syntactic properties of texts extracted from parallel corpora
 This repository contains all code used to produce and visualize the results from the short paper *Massively Multilingual Token-Based Typology Using the Parallel Bible Corpus* (Kann, forthcoming) presented at LREC 2024. 
 Please see the paper for further details.
 
+[![DOI](https://zenodo.org/badge/767429719.svg)](https://zenodo.org/doi/10.5281/zenodo.10858784)
+
 ## Dependencies
 The following external libraries are required:
 
