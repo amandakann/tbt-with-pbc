@@ -1,2 +1,6 @@
 
 .DS_Store
+
+data/grambank/
+data/ud-treebanks/
+/ud-parsed-test
