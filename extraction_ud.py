@@ -21,11 +21,11 @@ def count_headdep(filename:str, gov_upos:list[str], dep_upos:list[str], rel:str)
 
     return(counts['dephead'], counts['headdep'])
 
-def old_main(dirpath, label):
+def extract_ud(data_dir, out_dir, label):
     values = []
     dirc = 0
-    print(f"Total directories: {len(glob(f'{dirpath}/*'))}")
-    for dirname in glob(f'{dirpath}/*'):
+    print(f"Total directories: {len(glob(f'{data_dir}/*'))}")
+    for dirname in glob(f'{data_dir}/*'):
         dirc += 1
         if dirc % 10 == 0:
             print(f"Counting for {dirname.split('/')[-1]} ({dirc})")
@@ -53,7 +53,8 @@ def extract_conllu(data_dir, out_dir, dependencies):
 
 def main(data_dir, is_ud, out_dir, dependencies):
     if is_ud:
-        extract_ud(data_dir, out_dir, dependencies)
+        for label in dependencies:
+            extract_ud(data_dir, out_dir, label)
     else:
         extract_conllu(data_dir, out_dir, dependencies)
 
